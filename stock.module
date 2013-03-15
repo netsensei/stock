@@ -1,0 +1,88 @@
+<?php
+/**
+ * @file
+ *   Stock module is a startermodule containing custom functionality of
+ *   projects (i.e. blocks, form alters,...) The architecture of the module
+ *   follows "best practices" to organize functionality in a sensible way.
+ *
+ *   Use this module as a start for your own project by placing it in the
+ *   sites/all/modules/custom folder and start editing it.
+ *
+ *   stock.module
+ *   The .module file contains hook implementations. Any "private" functions,
+ *   (helpers, classes, callbacks,...) should reside in specific includes.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function stock_menu() {
+  // Custom pages
+  $items['stock/page'] = array(
+    'title' => 'Example page',
+    'page callback' => 'stock_example_page',
+    'access arguments' => array('access content'),
+    'file' => 'includes/stock.pages.inc',
+  );
+
+  // Administration pages
+  $items['admin/config/stock'] = array(
+    'title' => 'Stock',
+    'description' => 'Configure Stock settings.',
+    'position' => 'left',
+    'weight' => -20,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
+
+  $items['admin/config/stock/general'] = array(
+    'title' => 'General Stock settings',
+    'description' => 'Configure the Stock module',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('stock_general_settings_form'),
+    'access arguments' => array('access administration pages'),
+    'file' => 'includes/stock.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function stock_menu_alter(&$items) {
+  // Alter menu items here
+}
+
+/**
+ * Implements hook_init().
+ */
+function stock_init() {
+  // Add logic here
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function stock_block_info() {
+  // Add a link below the facets on /adressen and /annuaire.
+  $blocks['stock-my-block'] = array(
+    'info' => t('A generic Stock block'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function cancer_block_view($delta = '') {
+  require_once 'includes/stock.blocks.inc';
+
+  switch ($delta) {
+    case 'stock-my-block':
+      return stock_my_block();
+   }
+}
