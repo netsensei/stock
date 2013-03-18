@@ -25,6 +25,14 @@ function stock_menu() {
     'file' => 'includes/stock.pages.inc',
   );
 
+  $items['stock/form'] = array(
+    'title' => 'Example form'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('stock_my_custom_form'),
+    'access arguments' => array('access content'),
+    'file' => 'includes/stock.pages.inc',
+  );
+
   // Administration pages
   $items['admin/config/stock'] = array(
     'title' => 'Stock',
