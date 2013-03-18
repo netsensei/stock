@@ -8,13 +8,16 @@
  *   Use this module as a start for your own project by placing it in the
  *   sites/all/modules/custom folder and start editing it.
  *
- *   stock.module
- *   The .module file contains hook implementations. Any "private" functions,
- *   (helpers, classes, callbacks,...) should reside in specific includes.
+ *   The .module file contains mainly hook implementations. Any "private"
+ *   functions, (helpers, classes, callbacks,...) should reside in specific
+ *   includes.
  */
 
 /**
  * Implements hook_menu().
+ *
+ * path registrations should be grouped according to particular project
+ * architecture. (non)administration paths should at least be grouped.
  */
 function stock_menu() {
   // Custom pages
