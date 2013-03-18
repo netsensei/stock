@@ -106,7 +106,7 @@ function stock_block_info() {
 /**
  * Implements hook_block_view().
  */
-function cancer_block_view($delta = '') {
+function stock_block_view($delta = '') {
   require_once 'includes/stock.blocks.inc';
 
   switch ($delta) {
