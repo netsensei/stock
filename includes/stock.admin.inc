@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- *   This
+ *   This file contains page callbacks to administration pages.
  */
 
 /**

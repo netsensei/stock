@@ -1,12 +1,10 @@
 <?php
 /**
  * @file
- *
+ *  This file contains block callbacks which contain custom block logic.
  */
 
 /**
- * Block callback
- *
  * Build the stock-my-block block.
  */
 function stock_my_block() {
