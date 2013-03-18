@@ -57,6 +57,23 @@ function stock_menu_alter(&$items) {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function stock_theme() {
+  $file = 'includes/stock.theme.inc';
+
+  return array(
+    'my_element_wrapper' => array(
+      'render element' => 'element',
+      'file' => $file,
+    ),
+    'my_custom_html' => array(
+      'variables' => array('foo' => NULL),
+      'file' => $file,
+  );
+}
+
+/**
  * Implements hook_init().
  */
 function stock_init() {
