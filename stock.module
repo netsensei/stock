@@ -16,7 +16,7 @@
 /**
  * Implements hook_menu().
  *
- * path registrations should be grouped according to particular project
+ * Path registrations should be grouped according to particular project
  * architecture. (non)administration paths should at least be grouped.
  */
 function stock_menu() {

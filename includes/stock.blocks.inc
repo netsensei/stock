@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- *  This file contains block callbacks which contain custom block logic.
+ *   This file contains block callbacks which contain custom block logic.
  */
 
 /**
