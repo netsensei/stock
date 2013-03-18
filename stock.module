@@ -111,3 +111,15 @@ function cancer_block_view($delta = '') {
       return stock_my_block();
    }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function stock_form_alter(&$form, &$form_state, $form_id) {
+  // Custom form altering logic goes hore
+  //
+  // Generally hook_form_alter is used for small changes to forms. If you are
+  // planning to add a lot of complicated logic, consider using
+  // hook_form_FORMID_alter instead. We prefer compartimentalization of logic.
+}
+
