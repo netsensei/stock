@@ -77,7 +77,7 @@ function stock_theme() {
  * Implements hook_init().
  */
 function stock_init() {
-  // Add logic here
+  // Add initalization logic here
 }
 
 /**
