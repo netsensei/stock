@@ -5,19 +5,20 @@ Every Drupal project has a so-called "gluecode" module. It contains all project-
 specific customizations.
 
 Issue
+-----
 
 Generally, developers gluecode modules tend to have a "fuzzy" architecture. How
 a module is build differs from developer to developer and even from project to
 project. Without a common architecture, it's harder for teams of developers to
 work on projects.
 
-* A new developer has a hard time internalizing a large gluecode modules
-* It's harder to maintain different project as their overal architecture differs
+* A new developer has a hard time internalizing large gluecode modules
+* It's harder to maintain a portfolio as the code architecture differs
 from project to project
-* Without a frame of reference, common architectural mistakes are made time and
-again.
+* Without a frame of reference, common architectural mistakes are repeated
 
 Best practices
+--------------
 
 This starter module tries to implement a basic strategy according to a few best
 practices.
@@ -32,6 +33,7 @@ practices.
 * Keep form logic together (builder + handlers)
 
 How to use
+----------
 
 1. Put the starter module in sites/*/modules/custom/
 2. Enable the module
@@ -42,6 +44,7 @@ Optional: you could rename the module name & hook implementations to the name
 of your project (i.e. myproject_init())
 
 Particular functionality
+------------------------
 
 The module itself doesn't cover the entire Drupal & contrib API's, of course. It
 just implements a few very common hooks to get you started. If you want to know
@@ -50,6 +53,7 @@ please refer to the the Examples project which documents API by API specific use
 cases.
 
 Author
+------
 
 Matthias "Netsensei" Vandermaesen
 http://www.colada.be
