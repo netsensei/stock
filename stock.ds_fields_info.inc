@@ -9,7 +9,7 @@
 /**
  * Implements hook_ds_fields_info().
  */
-function stock_ds_fields_info() {
+function stock_ds_fields_info($entity_type) {
   $items = array();
 
   $file = drupal_get_path('module', 'stock') . '/includes/stock.ds.inc';
