@@ -3,3 +3,5 @@ description = Stock gluecode module.
 version = 1.0
 core = 7.x
 package = Stock
+
+files[] = includes/views/stock_handler_field_example.inc
