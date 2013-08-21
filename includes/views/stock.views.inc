@@ -8,7 +8,7 @@
 /**
  * Implements hook_views_data().
  */
-function zuiddag_views_data() {
+function stock_views_data() {
   $data['node']['example'] = array(
     'title' => t('Example views field handler'),
     'help' => t('An example views field handler associated to the node table'),
